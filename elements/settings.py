@@ -28,7 +28,7 @@ SECRET_KEY = env.str(
 )
 
 # False if not in os.environ because of casting above
-DEBUG = env.bool('DEBUG', default=False)
+DEBUG = env.bool('DEBUG', default=True)
 
 ALLOWED_HOSTS = ["*"]
 
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "rest_framework.authtoken",
     'csvimport.app.CSVImportConf',
     'elements.api',
+    'cacheops',
 ]
 
 MIDDLEWARE = [
@@ -78,6 +79,18 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'elements.wsgi.application'
 
+CACHEOPS_REDIS = {
+    'host': env.str('REDIS_HOST', 'redis'),
+    'port': env.str('REDIS_PORT', 6379),
+    'db': 1,
+}
+
+CACHEOPS = {
+    # Cache AppData for 1 hour
+    'api.appdata': {'ops': 'all', 'timeout':60*60},
+}
+
+CACHEOPS_DEGRADE_ON_FAILURE = True
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases

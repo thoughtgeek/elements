@@ -12,6 +12,7 @@ uWSGI = "^2.0.20"
 django-environ = "^0.9.0"
 psycopg2-binary = "^2.9.3"
 django-csvimport = "^2.16"
+django-cacheops = "^6.1"
 
 [tool.poetry.dev-dependencies]
 
