@@ -13,7 +13,6 @@ class AppDataViewset(viewsets.ModelViewSet):
     permission_classes = [AllowAny]
     serializer_class = AppDataListSerializer
     detail_serializer = AppDataDetailSerializer
-    queryset = AppData.objects.all()
 
     http_method_names = ["get"]
 
@@ -22,3 +21,8 @@ class AppDataViewset(viewsets.ModelViewSet):
             if hasattr(self, "detail_serializer"):
                 return self.detail_serializer
         return super(AppDataViewset, self).get_serializer_class()
+
+    def get_queryset(self):
+        if self.action == "retrieve":
+            return AppData.objects.all()
+        return AppData.objects.all().only("id", "title")
