@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+
+__author__ = "Surya Banerjee"
+
 from django.db import models
 
 class AppData(models.Model):
