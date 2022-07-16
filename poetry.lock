@@ -64,7 +64,7 @@ django = ">=2.2"
 pytz = "*"
 
 [[package]]
-name = "psycopg2"
+name = "psycopg2-binary"
 version = "2.9.3"
 description = "psycopg2 - Python-PostgreSQL Database Adapter"
 category = "main"
@@ -106,7 +106,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "520eda2d9f4999358fa493bfbc2600df3fcd3e3e211f73297718b2dbc8bc8ada"
+content-hash = "40d6f808acc8cc851c223c9e0d905899ff2204bfca81e86e34ee62513ecef63d"
 
 [metadata.files]
 asgiref = [
@@ -134,7 +134,7 @@ asgiref = [
 django = []
 django-environ = []
 djangorestframework = []
-psycopg2 = []
+psycopg2-binary = []
 pytz = []
 sqlparse = [
     {file = "sqlparse-0.4.2-py3-none-any.whl", hash = "sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d"},
