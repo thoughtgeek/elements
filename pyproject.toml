@@ -6,11 +6,12 @@ authors = ["thougtgeek <contact@thoughtgeek.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-Django = "^4.0.6"
+Django = "^3.0.5"
 djangorestframework = "^3.13.1"
 uWSGI = "^2.0.20"
 django-environ = "^0.9.0"
 psycopg2-binary = "^2.9.3"
+django-csvimport = "^2.16"
 
 [tool.poetry.dev-dependencies]
 
