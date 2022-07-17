@@ -13,6 +13,7 @@ ENV PYTHONUNBUFFERED=1
 ENV POETRY_VERSION=1.1.4
 
 # Environment
+RUN chmod +x ./docker-entrypoint.sh
 RUN apt-get update
 RUN apt-get install -y bash vim postgresql-client
 RUN pip install --upgrade pip
@@ -21,4 +22,4 @@ RUN pip install "poetry==$POETRY_VERSION" && \
 
 EXPOSE ${PORT}
 
-CMD poetry run uwsgi --http :${PORT} --processes ${WORKERS} --static-map /static=/static --module elements.wsgi:application
+CMD ./docker-entrypoint.sh
