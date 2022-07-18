@@ -9,5 +9,8 @@ poetry run python manage.py migrate
 echo "Fetch CSV and update db"
 bash scripts/update_db.sh
 
+echo "Start cronjob"
+cron
+
 echo "Running server"
 poetry run uwsgi --http :${PORT} --processes ${WORKERS} --static-map /static=/static --module elements.wsgi:application
