@@ -13,6 +13,7 @@ django-environ = "^0.9.0"
 psycopg2-binary = "^2.9.3"
 django-csvimport = "^2.16"
 django-cacheops = "^6.1"
+coverage = "^6.4.2"
 
 [tool.poetry.dev-dependencies]
 

@@ -13,3 +13,6 @@ class AppData(models.Model):
     def save(self, *args, **kwargs):
         super(AppData, self).save(*args, **kwargs)
         invalidate_model(AppData)
+
+    def __str__(self):
+        return f"id:{self.id}, title:{self.title}"
