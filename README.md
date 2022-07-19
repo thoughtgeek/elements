@@ -1,14 +1,20 @@
 # CSV data API
 
-### Setting up:
+## **Setting up:**
 This project requires docker and docker-compose to be built.
 To build the API, at the project root run -
 ```
 $ docker-compose up --build
 ```
 
-### Available APIs:
-Retrieve list of all entries
+## **Available APIs:**
+_(NOTE: Examples use this tool - https://httpie.io/)_</span>
+
+
+### Retrieve list of all entries
+
+HTTP Method: GET \
+API url: `/api/appdata/`
 ```
 $ http localhost:8000/api/appdata/
 HTTP/1.1 200 OK
@@ -40,7 +46,10 @@ X-Frame-Options: DENY
 ]
 ```
 
-Retrieve details of single entry
+### Retrieve details of single entry
+
+HTTP Method: GET \
+API url: `/api/appdata/<pk>/`
 ```
 $ localhost:8000/api/appdata/3/
 HTTP/1.1 200 OK
