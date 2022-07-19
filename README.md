@@ -69,7 +69,7 @@ X-Frame-Options: DENY
 }
 ```
 
-## Environment Variables
+## Environment Variables:
 The environment variables can be set in the .env file in the project root. The current variables available:
 ```
 DB_NAME
