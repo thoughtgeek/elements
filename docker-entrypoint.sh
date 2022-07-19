@@ -4,6 +4,7 @@ echo "Wait for db to boot"
 sleep 10
 
 echo "Apply database migrations.."
+poetry run python manage.py makemigrations #For django-csvimport
 poetry run python manage.py migrate
 
 echo "Fetch CSV and update db"

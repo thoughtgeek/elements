@@ -7,11 +7,13 @@ import os
 from django.urls import reverse
 from django.conf import settings
 from django.core import management
+from django.test import override_settings
 from django.test import TestCase, Client
 
 from elements.api.models import AppData
 
 
+@override_settings(CACHEOPS_ENABLED=False)
 class AppDataAPITest(TestCase):
     def setUp(self):
         # Import csv into db
