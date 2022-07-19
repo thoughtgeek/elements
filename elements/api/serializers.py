@@ -12,7 +12,7 @@ class AppDataListSerializer(serializers.ModelSerializer):
 
     # Truncate if too long
     def get_title(self, obj):
-        return (obj.title[:28] + '...') if len(obj.title) > 28 else obj.title
+        return (obj.title[:28] + "...") if len(obj.title) > 28 else obj.title
 
     class Meta:
         model = AppData

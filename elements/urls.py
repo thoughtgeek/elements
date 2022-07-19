@@ -1,4 +1,3 @@
-
 #!/usr/bin/env python3
 
 __author__ = "Surya Banerjee"
@@ -13,5 +12,5 @@ router = DefaultRouter()
 router.register(r"appdata", AppDataViewset, basename="appdata")
 
 urlpatterns = [
-    path('api/', include(router.urls)),
+    path("api/", include(router.urls)),
 ]

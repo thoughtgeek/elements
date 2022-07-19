@@ -44,11 +44,13 @@ class AppDataAPITest(TestCase):
         self.assertEqual(len(response.json()), 4)
 
         for i in range(4):
-            self.assertEqual(response.json()[i]['title'], self.valid_titles[i])
+            self.assertEqual(response.json()[i]["title"], self.valid_titles[i])
 
     def test_api_detail(self):
         for i in range(1, 5):
             response = self.client.get(reverse("appdata-list") + f"{i}/")
-            self.assertEqual(response.json()['title'], self.valid_titles[i-1])
-            self.assertEqual(response.json()['description'], self.valid_descriptions[i-1])
-            self.assertEqual(response.json()['image'], self.valid_images[i-1])
+            self.assertEqual(response.json()["title"], self.valid_titles[i - 1])
+            self.assertEqual(
+                response.json()["description"], self.valid_descriptions[i - 1]
+            )
+            self.assertEqual(response.json()["image"], self.valid_images[i - 1])
