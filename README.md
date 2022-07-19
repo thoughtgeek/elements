@@ -84,7 +84,7 @@ REDIS_HOST
 ```
 
 
-### Testing:
+## Testing:
 Run unit tests
 ```
 $ docker-compose exec web poetry run coverage run --source "elements" manage.py test -v 2
