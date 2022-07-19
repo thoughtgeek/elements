@@ -62,10 +62,14 @@ X-Frame-Options: DENY
 
 ### Testing:
 Run unit tests
-`$ docker-compose exec web poetry run coverage run --source "elements" manage.py test -v 2`
+```
+$ docker-compose exec web poetry run coverage run --source "elements" manage.py test -v 2
+```
 
 Generate coverage report
-`$ docker-compose exec web poetry run coverage report`
+```
+$ docker-compose exec web poetry run coverage report
+```
 
 ```
 Name                                      Stmts   Miss  Cover
